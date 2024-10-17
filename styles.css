@@ -1,0 +1,144 @@
+body {
+    font-family: "Proxima Nova", sans-serif;
+    color: #1d4c6c;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.overallSum p{
+    margin-top: 0;
+    font-size: 50px;
+}
+
+.leaderboard {
+    margin-top: 50px;
+}
+.timeContainer {
+    width: 70%;
+    max-width: 1000px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+ 
+    font-size: small;
+}
+.timeContainer .left {
+    display: flex;
+    text-align: left;
+
+}
+.timeContainer .left p {
+    margin-right: 10px;
+}
+.timeContainer .right {
+    text-align: right;
+}
+
+table {
+    width: 70%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin: 20px auto 0;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+}
+
+th {
+    background-color: #1d4c6c;
+    color: white;  
+}
+
+th, td {
+    padding: 20px 15px;
+}
+
+td:first-child {
+    font-weight: bold; /* Make the rank column bold */
+}
+
+
+th:nth-child(1), td:nth-child(1) {
+    width: 20%; /* Rank column */
+    text-align: center;
+}
+th:nth-child(2), td:nth-child(2) {
+    width: 50%; /* Name column */
+    text-align: left;
+}
+th:nth-child(3), td:nth-child(3) {
+    width: 30%; /* Amount Raised column */
+    text-align: right;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+.eventInfo {
+    width: 50%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin: 20px auto 0;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.eventInfo h2{
+    padding: 20px;
+}
+
+#startTime, #endTime, label {
+    display: flex;
+    margin: 5px 20px 5px 20px;
+    padding: 5px;
+    text-align: left;
+    border-radius: 5px;
+    border-color: #1d4c6c;
+    font-size: large;
+    font-family: "Proxima Nova", sans-serif
+}
+
+.eventInfo textarea{
+    display: block;
+    height: 300px;
+    margin: 5px 20px 5px 20px;
+    padding: 5px;
+    outline: none;
+    resize: none;
+    width: 90%;
+    border-radius: 5px;
+    border-color: #1d4c6c;
+    font-size: large;
+    font-family: "Proxima Nova", sans-serif;
+}
+
+textarea::-webkit-scrollbar{
+    width: 0px;
+}
+
+button {
+    width: 50%;
+    height: 50px;
+    margin: 15px;
+    font-size: 18px;
+    font-family: "Proxima Nova", sans-serif;
+    background-color: #1d4c6c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    background-color: #082233;
+}
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Donation Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="leaderboardData.js"></script>
+
+</head>
+
+<body>
+
+    <div class="overallSum">
+        <h2>Overall Raised</h2>
+        <p>$500</p>
+    </div>
+
+    <div class="leaderboard">
+        <h1>Leaderboard</h1>
+        <div class="timeContainer">
+            <div class="left">
+                <p><strong>Start Time:</strong> 2024-10-19, 10:00 a.m.</p>
+                <p><strong>End Time:</strong> 2024-10-20, 10:00 a.m.</p>
+            </div>
+            <div class="right">
+                <p id="updateTime"><strong>Last Updated:</strong> ----/--/-- --:--:--</p>
+            </div>   
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Amount Raised</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableData">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!--
+    <div class = "eventInfo">
+        <h2>Event Information</h2>
+        <form id="leaderboardForm">
+            <label for="startTime">Start Time (UTC)</label>
+            <input type="datetime-local" id="startTime" name="startTime" required><br>
+
+            <label for="endTime">End Time (UTC)</label>
+            <input type="datetime-local" id="endTime" name="endTime" required><br>
+
+            <label for="participantIds">Participant IDs</label>
+            <textarea name="participantIds" id="participantIds" required placeholder="Enter IDs here with a comma in between IDs. example: 563021, 203912, 293483"></textarea>
+            <br>
+
+            <button type="button" onclick="saveLeaderboardData()">Save</button>
+
+        </form>
+
+
+    </div>
+    -->
+
+
+
+</body>
+
+
+</html>
