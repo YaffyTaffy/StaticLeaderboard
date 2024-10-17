@@ -76,7 +76,7 @@ async function reloadLeaderboardStats() {
   let totalOverallRaised = 0;
 
   // Fixed conversion rate from USD to CAD
-  const exchangeRateUsdToCad = 1.38; // Example rate, adjust as needed
+  const exchangeRateUsdToCad = 1.38; 
 
   // Fetch data for all participants
   for (let i = 0; i < participantIds.length; i++) {
