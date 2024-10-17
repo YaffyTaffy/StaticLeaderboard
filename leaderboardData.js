@@ -62,7 +62,10 @@ async function fetchParticipantData(participantId) {
 
 // Function to reload the leaderboard and update the table in HTML
 async function reloadLeaderboardStats() {
-  const participantIds = [531986, 540075, 540361, 537353, 532911, 531613, 539916, 536837, 538348, 538351, 538371, 533325, 530720];
+  const participantIds = [531986, 540075, 540361, 537353, 532911, 
+                          531613, 539916, 536837, 538348, 538351, 
+                          538371, 533325, 530720];
+                          
   const startTimeUTC = convertToUTCString("2024-10-03T10:00");
   const endTimeUTC = convertToUTCString("2024-10-18T10:00");
 
@@ -70,6 +73,10 @@ async function reloadLeaderboardStats() {
   leaderboardTable.innerHTML = ""; // Clear the table before adding new data
 
   let participantsData = [];
+  let totalOverallRaised = 0;
+
+  // Fixed conversion rate from USD to CAD
+  const exchangeRateUsdToCad = 1.38; // Example rate, adjust as needed
 
   // Fetch data for all participants
   for (let i = 0; i < participantIds.length; i++) {
@@ -79,20 +86,20 @@ async function reloadLeaderboardStats() {
     const { name } = await fetchParticipantData(participantId);
 
     // Fetch donation data and calculate total amount raised
-    const totalRaised = await fetchParticipantDonations(participantId, startTimeUTC, endTimeUTC);
+    const totalRaisedUsd = await fetchParticipantDonations(participantId, startTimeUTC, endTimeUTC);
 
-    participantsData.push({ name, totalRaised });
+    // Convert the total raised amount from USD to CAD
+    const totalRaisedCad = totalRaisedUsd * exchangeRateUsdToCad;
+
+    participantsData.push({ name, totalRaised: totalRaisedCad });
+    totalOverallRaised += totalRaisedCad;
   }
 
   // Sort participants by totalRaised in descending order
   participantsData.sort((a, b) => b.totalRaised - a.totalRaised);
 
   // Update the leaderboard table with sorted participants
-  let totalOverallRaised = 0;
-
   participantsData.forEach((participant, index) => {
-    totalOverallRaised += participant.totalRaised;
-
     // Create a new row for the participant
     const row = document.createElement("tr");
 
@@ -122,11 +129,7 @@ async function reloadLeaderboardStats() {
   // Update the "Last Updated" time
   const now = new Date();
   const updateTimeElement = document.getElementById("updateTime");
-
-  // Format the time to a more human-readable form
   const formattedTime = now.toLocaleString(); // e.g., "10/16/2024, 11:52:31 AM"
-
-  // Set the formatted time in the p element
   updateTimeElement.innerHTML = `<strong>Last Updated:</strong> ${formattedTime}`;
 }
 
