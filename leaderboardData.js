@@ -142,8 +142,5 @@ async function reloadLeaderboardStats() {
 document.addEventListener("DOMContentLoaded", function () {
   reloadLeaderboardStats();
 
-  setInterval(function () {
-    reloadLeaderboardStats();
-    console.log("refresh");
-  }, 900000); // 15 minute 
+
 });
