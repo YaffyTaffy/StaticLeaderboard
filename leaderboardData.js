@@ -62,9 +62,12 @@ async function fetchParticipantData(participantId) {
 
 // Function to reload the leaderboard and update the table in HTML
 async function reloadLeaderboardStats() {
-  const participantIds = [531986, 540075, 540361, 537353, 532911, 
-                          531613, 539916, 536837, 538348, 538351, 
-                          538371, 533325, 530720];
+  const participantIds = [537353, 540361, 539916, 537877, 532911,
+                          538348, 538351, 537877, 538043, 537880,
+                          537881, 533325, 538371, 540075, 542665,
+                          542660, 531310, 537878, 541039, 530711,
+                          533110, 542621, 542114, 542493, 537526,
+                          ];
 
   const startTimeUTC = convertToUTCString("2024-10-19T14:00");
   const endTimeUTC = convertToUTCString("2024-10-20T14:00");
