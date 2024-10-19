@@ -67,7 +67,7 @@ async function reloadLeaderboardStats() {
                           537881, 533325, 538371, 540075, 542665,
                           542660, 531310, 537878, 541039, 530711,
                           533110, 542621, 542114, 542493, 537526,
-                          ];
+                          542913, 538042, 542915, 542916, ];
 
   const startTimeUTC = convertToUTCString("2024-10-19T10:00");
   const endTimeUTC = convertToUTCString("2024-10-20T10:00");
@@ -143,5 +143,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(function () {
     reloadLeaderboardStats();
     console.log("refresh");
-  }, 30000); // 30 seconds
+  }, 60000); // 1 minute seconds
 });
