@@ -69,8 +69,8 @@ async function reloadLeaderboardStats() {
                           533110, 542621, 542114, 542493, 537526,
                           ];
 
-  const startTimeUTC = convertToUTCString("2024-10-19T14:00");
-  const endTimeUTC = convertToUTCString("2024-10-20T14:00");
+  const startTimeUTC = convertToUTCString("2024-10-19T10:00");
+  const endTimeUTC = convertToUTCString("2024-10-20T10:00");
 
   const leaderboardTable = document.getElementById("tableData");
   leaderboardTable.innerHTML = ""; // Clear the table before adding new data
