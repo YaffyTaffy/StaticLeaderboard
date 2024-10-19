@@ -143,5 +143,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(function () {
     reloadLeaderboardStats();
     console.log("refresh");
-  }, 60000); // 1 minute seconds
+  }, 420000); // 1 minute seconds
 });
