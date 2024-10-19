@@ -22,6 +22,8 @@ function saveLeaderboardData() {
 
 }
 
+
+
 // Function to get donation data for a participant and calculate the total amount raised
 async function fetchParticipantDonations(participantId, startTime, endTime) {
   const donationsUrl = `${baseUrl}participants/${participantId}/donations`;
@@ -143,5 +145,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(function () {
     reloadLeaderboardStats();
     console.log("refresh");
-  }, 420000); // 1 minute seconds
+  }, 900000); // 15 minute 
 });
